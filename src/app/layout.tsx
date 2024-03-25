@@ -1,8 +1,11 @@
+import '@varum-org/varum-ui/ui/styles.css'
 import './globals.css'
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import React from 'react'
+
+import AppLayout from '@/components/layout/AppLayout'
 
 import AppProvider from './app-provider'
 
@@ -21,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          <AppLayout>{children}</AppLayout>
+        </AppProvider>
       </body>
     </html>
   )
