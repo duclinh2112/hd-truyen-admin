@@ -16,7 +16,6 @@ export default function AppProvider({ children }: AppProviderProps) {
       <PaxUIProvider>
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
-            {/* <I18nextProvider i18n={i18n}>{children}</I18nextProvider> */}
             {children}
           </PersistGate>
         </Provider>

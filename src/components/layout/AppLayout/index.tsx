@@ -1,7 +1,11 @@
 import React from 'react'
 
-const AppLayout = () => {
-  return <div>AppLayout</div>
+type AppLayoutProps = {
+  children: React.ReactNode
+}
+
+const AppLayout = ({ children }: AppLayoutProps) => {
+  return <>{children}</>
 }
 
 export default AppLayout
